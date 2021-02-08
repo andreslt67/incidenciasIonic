@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Añadir incidencia</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onCancel()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <form [formGroup]="form">
+          <ion-item>
+            <ion-label position="stacked">
+              Introduzca el nombre de la incidencia:
+            </ion-label>
+            <ion-input type="text" formControlName="nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">
+              Introduzca la descripción de la incidencia:
+            </ion-label>
+            <ion-input type="text" formControlName="descripcion"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">
+              Introduzca la fecha de la incidencia:
+            </ion-label>
+            <ion-input type="date" formControlName="fecha"></ion-input>
+          </ion-item>
+        </form>
+        <ion-button (click)="onConfirm()">
+          Añadir
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
